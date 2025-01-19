@@ -49,7 +49,7 @@ class PostgresSSLConfig {
 class PostgresConfig {
 	/** Postgres database name */
 	@Env('DB_POSTGRESDB_DATABASE')
-	database: string = 'n8n';
+	database: string = 'n8n2';
 
 	/** Postgres database host */
 	@Env('DB_POSTGRESDB_HOST')
@@ -57,7 +57,7 @@ class PostgresConfig {
 
 	/** Postgres database password */
 	@Env('DB_POSTGRESDB_PASSWORD')
-	password: string = '';
+	password: string = '123456';
 
 	/** Postgres database port */
 	@Env('DB_POSTGRESDB_PORT')
@@ -135,7 +135,7 @@ class SqliteConfig {
 export class DatabaseConfig {
 	/** Type of database to use */
 	@Env('DB_TYPE')
-	type: 'sqlite' | 'mariadb' | 'mysqldb' | 'postgresdb' = 'sqlite';
+	type: 'sqlite' | 'mariadb' | 'mysqldb' | 'postgresdb' = 'postgresdb';
 
 	/** Prefix for table names */
 	@Env('DB_TABLE_PREFIX')
